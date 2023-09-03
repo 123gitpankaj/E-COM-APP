@@ -27,8 +27,7 @@ public class ShoppingCart {
 			 int id = sc.nextInt();
 			System.out.println("Enter the product quantity :");
 			int quantity = sc.nextInt();
-			
-			
+
 			ShoppingCart shoppingCart = new ShoppingCart();
 			shoppingCart.addToCart(id,quantity);
 			
@@ -37,7 +36,7 @@ public class ShoppingCart {
 	
 	public  void addToCart(int id , int quantity) {
 		
-		int a = 0;
+		int prise = 0;
 		
 		try {
 			
@@ -51,24 +50,21 @@ public class ShoppingCart {
 			
 			while (rs.next()) {
 				
-			 a = rs.getInt("price");
+			prise = rs.getInt("price");
 				
 			}
 			
-			items.add(new product(id, quantity, a));
+
+			items.add(new product(quantity,prise));
 			
 			ShoppingCart shoppingCart = new ShoppingCart();
 			shoppingCart.calculateTotalBill();
-	
+			
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
 	
 	}
-	
-	
-
-	
 	
 	public void calculateTotalBill() {
 		
