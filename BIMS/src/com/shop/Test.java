@@ -29,6 +29,10 @@ public class Test {
 			BillGeneration billGeneration = new BillGeneration();
 			billGeneration.getResponse();
 			break;
+		case 5:
+			ShoppingCart shoppingCart = new ShoppingCart();
+			shoppingCart.fillCarts();
+			break;		
 		default:
 			break;
 		}
