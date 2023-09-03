@@ -21,6 +21,9 @@ public class Test {
 			   CheckUserDetails checkUserDetails = new CheckUserDetails();
 			   checkUserDetails.getDetails();
 			   break;
+		case 3:
+			  ProductDetails productDetails =  new ProductDetails();
+			  productDetails.getProductDetails();
 		default:
 			break;
 		}
