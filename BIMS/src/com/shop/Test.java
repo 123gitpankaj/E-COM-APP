@@ -24,6 +24,11 @@ public class Test {
 		case 3:
 			  ProductDetails productDetails =  new ProductDetails();
 			  productDetails.getProductDetails();
+			  break;
+		case 4:
+			BillGeneration billGeneration = new BillGeneration();
+			billGeneration.getResponse();
+			break;
 		default:
 			break;
 		}
