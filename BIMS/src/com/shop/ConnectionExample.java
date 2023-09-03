@@ -11,9 +11,9 @@ public class ConnectionExample {
 		
 		try {
 			
-			Class.forName("com.jdbc.mysql.Driver");
+			Class.forName("com.mysql.jdbc.Driver");
 			
-			con = DriverManager.getConnection("mysql:jdbc://localhost:3306/shop","root","123456");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/shop","root","123456");
 			
 			
 		} catch (Exception e) {
