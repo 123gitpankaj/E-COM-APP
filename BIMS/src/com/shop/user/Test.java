@@ -36,7 +36,10 @@ public class Test {
 		case 6:
 			BuyProducts buyProducts = new BuyProducts();
 			buyProducts.buyProduct();
-			break;		
+			break;	
+		case 7:
+			onlyRegisteredUser registeredUser = new onlyRegisteredUser();
+			registeredUser.getEntry();
 		default:
 			break;
 		}
