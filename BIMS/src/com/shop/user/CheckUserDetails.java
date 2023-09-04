@@ -1,9 +1,11 @@
-package com.shop;
+package com.shop.user;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Scanner;
+
+import com.shop.Admin.ConnectionExample;
 
 public class CheckUserDetails {
 	

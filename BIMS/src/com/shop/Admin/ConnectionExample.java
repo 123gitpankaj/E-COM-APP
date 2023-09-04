@@ -1,4 +1,4 @@
-package com.shop;
+package com.shop.Admin;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

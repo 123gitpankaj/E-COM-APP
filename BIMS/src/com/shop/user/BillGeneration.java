@@ -1,4 +1,4 @@
-package com.shop;
+package com.shop.user;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,20 +7,21 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import com.shop.Admin.ConnectionExample;
+
 public class BillGeneration {
 	
 	
-	public void getResponse() {
+	public static void getResponse() {
 		
 		System.out.println("Enter the product id to buy product :");
 		Scanner sc = new Scanner(System.in);
-	       int  prodID = sc.nextInt();
+	     int  prodID = sc.nextInt();
 		System.out.println("Enter the quantity :");
 	     int  prodQuantty = sc.nextInt();
 	      
 	      System.out.println("Do you want to view cart (Yes/No)");
 	          String  ans = sc.next();
-	      
 	      
 	      if (ans.equals("yes")) {
 	    	  
@@ -34,9 +35,6 @@ public class BillGeneration {
 		}
 	
 	}
-	
-	   
-	
 	
 		public static void passBill(int ID , int Quantity) {
 			
@@ -69,16 +67,29 @@ public class BillGeneration {
 		
 		public static void  calculateBill(int quant , int value) {
 			
-			int total = 0;
+			int totalbill = 0;
 			
-			total = quant * value ;
+			totalbill = totalbill +(quant * value) ;
 			
-			System.out.println("Total Bill of the Customer is :"+total);
+			System.out.println("Do You want mote items :");
 			
+		   Scanner sc = new Scanner(System.in);
+		   
+		   String  ans1 = sc.next();
+		   
+		   
+		 if (ans1.equals("yes")) {
 			
+			 getResponse();
+			   
+			   
+		} else {
 			
+			System.out.println("Total bill of the customer is :"+totalbill);
+
 		}
-		
+			 
+		}
 		
 		
 	

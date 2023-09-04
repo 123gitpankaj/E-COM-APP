@@ -1,4 +1,4 @@
-package com.shop;
+package com.shop.user;
 
 import java.util.Scanner;
 
@@ -30,8 +30,12 @@ public class Test {
 			billGeneration.getResponse();
 			break;
 		case 5:
-			ShoppingCart shoppingCart = new ShoppingCart();
-			shoppingCart.fillCarts();
+			ProductDisplay productDisplay = new ProductDisplay();
+			productDisplay.dispalyProducts();
+			break;	
+		case 6:
+			BuyProducts buyProducts = new BuyProducts();
+			buyProducts.buyProduct();
 			break;		
 		default:
 			break;
