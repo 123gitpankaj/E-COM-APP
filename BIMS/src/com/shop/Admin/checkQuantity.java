@@ -5,6 +5,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Scanner;
 
+import com.shop.user.ConnectionExample;
+
 public class checkQuantity {
 	
 	public void getQuantity() {

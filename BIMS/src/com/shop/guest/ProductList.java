@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import com.shop.Admin.ConnectionExample;
+import com.shop.user.ConnectionExample;
 
 public class ProductList {
 	

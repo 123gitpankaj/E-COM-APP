@@ -7,8 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import com.shop.Admin.ConnectionExample;
-
 public class onlyRegisteredUser {
 	
 	public void getEntry() {
@@ -19,7 +17,6 @@ public class onlyRegisteredUser {
 
 		System.out.println("Enter the first name of user :");
 		Scanner sc = new Scanner(System.in);
-		
 		String ans = sc.next();
 		
 		try {
@@ -28,7 +25,7 @@ public class onlyRegisteredUser {
 			Connection con = connectionExample.getConnection();
 			PreparedStatement ps = con.prepareStatement("select *  from user ");
 			
-		     ResultSet rs = ps.executeQuery();
+		    ResultSet rs = ps.executeQuery();
 			
 			while (rs.next()) {
 				
@@ -37,8 +34,7 @@ public class onlyRegisteredUser {
 				list.add(a);
 			
 			}
-			
-			
+	
 			if (list.contains(ans)) {
 				
 				BuyProducts buyProducts = new BuyProducts();
@@ -52,16 +48,10 @@ public class onlyRegisteredUser {
 			
 			
 		} catch (Exception e) {
-			// TODO: handle exception
+			
+			e.printStackTrace();
 		}
-		
-		
-		
-		
-		
-		
-		
-		
+	
 		
 	}
 
